@@ -20,24 +20,26 @@ const EmailSection = () => {
         const endpoint = "/api/send";
 
         const options = {
-            method: 'POST',
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
             },
             body: JSONdata
         }
 
-        const response = await fetch(endpoint, options);
-        const resData = await response.json();
-        console.log(resData);
-        if(response.status === 'success') {
-            console.log("message sent");
+        await fetch(endpoint, options)
+        .then((res) => {
+            console.log(res);
+            console.log("Message Sent");
             setEmailSubmitted(true);
-        }
+        })
+        .catch((err) => {
+            console.log(err);
+        });
     }
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
-        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-600 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+    <section id='contact' className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
+        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-600 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-1/3 sm:top-3/4 -left-4 transform -translate-x-3/4 -translate-1/2"></div>
         <div className='z-10'>
             <h5 className="text-xl font-bold text-white my-2">
                 Let's Connect
@@ -48,15 +50,15 @@ const EmailSection = () => {
                 I will do my best to get in touch with you as soon as I can!
             </p>
             <div className="socials flex flex-row gap-2">
-                <Link href="">
+                <Link href="https://github.com/danmcgrath10">
                     <Image src={GithubIcon} alt='Github Icon'/>
                 </Link>
-                <Link href="">
+                <Link href="https://www.linkedin.com/in/mcgrath-daniel-e/">
                     <Image src={LinkedInIcon} alt='LinkedIn Icon'/>
                 </Link>
             </div>
         </div>
-        <div>
+        <div className='z-10'>
             <form className='flex flex-col' onSubmit={handleSubmit}>
                 <div className='mb-6'>
                     <label htmlFor="email" type="email" className='text-white block mb-2 text-sm font-medium'>Your Email</label>

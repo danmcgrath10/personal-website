@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import Image from "next/image";
+import Logo from "../../public/images/website-logo.svg";
 
 const navLinks = [
   {
@@ -32,9 +33,9 @@ const Navbar = () => {
           className="text-2xl md:text-5xl text-white font-semibold"
         >
           <Image 
-            src={"/images/website-logo.svg"}
-            height={75}
-            width={75}
+            src={Logo}
+            height={50}
+            width={50}
           />
         </Link>
         <div className="mobile-menu block md:hidden">
