@@ -4,6 +4,7 @@ import GithubIcon from "../../public/github-icon.svg";
 import LinkedInIcon from "../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import {HandleSubmit} from "./functions/HandleSubmit";
 
 const EmailSection = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -16,37 +17,16 @@ const EmailSection = () => {
         setSubject('');
         setMessage('');
     }
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const data = {
-            email: email,
-            subject: subject,
-            message: message,
-        }
-
-        const JSONdata = JSON.stringify(data);
-        const endpoint = "/api/send";
-
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSONdata
-        }
-
-        await fetch(endpoint, options)
+    const handleSubmit = () => {
+        HandleSubmit(email, subject, message)
         .then((res) => {
             console.log(res);
-            console.log("Message Sent");
-            setEmailSubmitted(true);
-            resetForm();
         })
-        .catch((err) => {
-            console.log(err);
+        .finally(() => {
+            resetForm();
         });
     }
+
   return (
     <section id='contact' className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
         <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-600 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-1/3 sm:top-3/4 -left-4 transform -translate-x-3/4 -translate-1/2"></div>
