@@ -33,8 +33,8 @@ const Navbar = () => {
         >
           <Image 
             src={"/images/website-logo.svg"}
-            height={200}
-            width={200}
+            height={75}
+            width={75}
           />
         </Link>
         <div className="mobile-menu block md:hidden">
