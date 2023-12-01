@@ -7,6 +7,15 @@ import Image from "next/image";
 
 const EmailSection = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+    const resetForm = () => {
+        setEmail('');
+        setSubject('');
+        setMessage('');
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,6 +41,7 @@ const EmailSection = () => {
             console.log(res);
             console.log("Message Sent");
             setEmailSubmitted(true);
+            resetForm();
         })
         .catch((err) => {
             console.log(err);
@@ -62,17 +72,19 @@ const EmailSection = () => {
             <form className='flex flex-col' onSubmit={handleSubmit}>
                 <div className='mb-6'>
                     <label htmlFor="email" type="email" className='text-white block mb-2 text-sm font-medium'>Your Email</label>
-                    <input type='email' id='email' required className='bg-[#18191E] border border-orange-400 placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5' placeholder='danny@google.com'></input>
+                    <input type='email' id='email' value={email} onChange={(e) => setEmail(e.target.value)} required className='bg-[#18191E] border border-orange-400 placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5' placeholder='danny@google.com'/>
                 </div>
                 <div className='mb-6'>
                     <label htmlFor="subject" type="text" className='text-white block mb-2 text-sm font-medium'>Subject</label>
-                    <input type='text' id='subject' required className='bg-[#18191E] border border-orange-400 placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5' placeholder='Just saying hello'></input>
+                    <input type='text' id='subject' value={subject} onChange={(e) => setSubject(e.target.value)} required className='bg-[#18191E] border border-orange-400 placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5' placeholder='Just saying hello'/>
                 </div>
                 <div className='mb-6'>
                     <label htmlFor='message' className='text-white block mb-2 font-medium'>Message</label>
                     <textarea
                         name='message'
                         id='message'
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                         className='bg-[#18191E] border border-orange-400 placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
                         placeholder="Let's Chat"
                     />
