@@ -20,18 +20,18 @@ const EmailSection = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = {
-            email: e.target.email.value,
-            subject: e.target.subject.value,
-            message: e.target.message.value
+            email: email,
+            subject: subject,
+            message: message,
         }
 
         const JSONdata = JSON.stringify(data);
         const endpoint = "/api/send";
 
         const options = {
-            method: "POST",
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
             },
             body: JSONdata
         }
