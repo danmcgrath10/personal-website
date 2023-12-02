@@ -17,11 +17,11 @@ const HeroSection = () => {
                         // Same substring at the start will only be typed out once, initially
                         'Danny',
                         3000, // wait 1s before replacing "Mice" with "Hamsters"
-                        'a Web Developer',
+                        'an Engineer',
                         3000,
-                        'an Avid Learner',
+                        'a Developer',
                         3000,
-                        'Human',
+                        'Always Learning',
                         3000
                     ]}
                     wrapper="span"
@@ -30,7 +30,7 @@ const HeroSection = () => {
                 />
             </h1>
             <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6">
-            Software Engineer with 4 years of full stack experience focusing on web and cross-platform native desktop application development. Proficient at building dynamic and scalable web infrastructures that solve problems. Passionate about customer experience and tooling.
+                I love to write simple and beautiful applications.
             </p>
             <div>
                 <Link

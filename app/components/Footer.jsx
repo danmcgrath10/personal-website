@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className='footer border border-t-[#33353F] border-l-transparent border-r-transparent text-white'>
+    <footer className='footer border border-t-[#33353F] border-l-transparent border-r-transparent border-b-transparent text-white'>
         <div className='container p-8 flex justify-between'>
             <span>
               <Image 
@@ -15,7 +15,7 @@ const Footer = () => {
               />
             </span>
             <p className='text-slate-600'>
-                @2023 All Rights Reserved.
+                @2023 Daniel McGrath All Rights Reserved.
             </p>
         </div>
     </footer>

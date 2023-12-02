@@ -62,12 +62,12 @@ const AboutSection = () => {
                 height={500}
             />
             <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-                <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-                <p className="text-base lg:text-lg">
-                    
+                <h2 className="text-4xl font-bold text-white mb-2">About Me</h2>
+                <p className="text-[#ADB7BE] text-base sm:text-md lg:text-lg">
+                I'm a Software Engineer with 4 years of full stack experience focusing on web and cross-platform native desktop application development. I'm proficient at building dynamic and scalable web infrastructures that solve problems and I'm passionate about customer experience and tooling.
                 </p>
                 <br/>
-                <div className="flex flex-row justify-start mt-8">
+                <div className="flex flex-row justify-start mt-4">
                     <TabButton
                         selectTab={() => handleTabChange("skills")}
                         active={tab === "skills"}
@@ -90,7 +90,7 @@ const AboutSection = () => {
                         Work{" "}
                     </TabButton>
                 </div>
-                <div className="mt-8">
+                <div className="mt-4">
                     {TAB_DATA.find((t) => t.id === tab).content}
                 </div>
             </div>
