@@ -47,6 +47,10 @@ const EmailSection = () => {
                     <Image src={LinkedInIcon} alt='LinkedIn Icon'/>
                 </Link>
             </div>
+            <div className='flex flex-col gap-2 mt-2 text-[#ADB7BE] max-w-md mb-4'>
+                <p >Email: <a href="mailto:your-email@example.com">danmcgrath1035@gmail.com</a></p>
+                <p>Phone: <a href="tel:+16035481168">+1(603)548-1168</a></p>
+            </div>
         </div>
         <div className='z-10'>
             <form className='flex flex-col' onSubmit={handleSubmit}>

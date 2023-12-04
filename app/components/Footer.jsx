@@ -14,7 +14,7 @@ const Footer = () => {
                 width={25}
               />
             </span>
-            <p className='text-slate-600'>
+            <p className='text-slate-600 text-xs sm:text-md'>
                 @2023 Daniel McGrath All Rights Reserved.
             </p>
         </div>
