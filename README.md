@@ -38,8 +38,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Name**: [Daniel McGrath]
-- **Email**: [danmcgrath1035@gmail.com]
+- **Name**: Daniel McGrath
+- **Email**: danmcgrath1035@gmail.com
 - **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/mcgrath-daniel-e/)
 - **Website**: [See it Live!](https://www.dannymportfolio.com)
 
