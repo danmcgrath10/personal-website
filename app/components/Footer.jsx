@@ -15,7 +15,7 @@ const Footer = () => {
               />
             </span>
             <p className='text-slate-600 text-xs sm:text-md'>
-                @2023 Daniel McGrath All Rights Reserved.
+                @2024 Daniel McGrath All Rights Reserved.
             </p>
         </div>
     </footer>

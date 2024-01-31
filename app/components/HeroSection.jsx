@@ -4,6 +4,20 @@ import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
 
+/**
+ * HeroSection Component
+ * ----------------------
+ * This component renders the Hero Section of the personal portfolio website.
+ * Features:
+ * - Dynamic TypeAnimation for engaging text display with phrases like "Danny", "an Engineer", etc.
+ * - A personal statement.
+ * - Action buttons for "Get in Touch" and "Download Resume".
+ * - Responsive design using Tailwind CSS grid for layout arrangement.
+ * - Includes a stylized avatar image.
+ * 
+ * The component primarily uses Next.js and React for its development. Tailwind CSS is utilized
+ * for styling to ensure a modern and responsive design.
+ */
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
@@ -36,7 +50,7 @@ const HeroSection = () => {
                 <Link
                     href={"#contact"}
                 >
-                <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-orange-400 bg-white hover:bg-slate-200 text-black">Hire Me</button>
+                <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-orange-400 bg-white hover:bg-slate-200 text-black">Get in Touch</button>
                 </Link>
                 <a href="/images/Daniel_McGrath_Resume.pdf" download="Daniel_McGrath_Resume.pdf">
                     <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-orange-400 to-white hover:bg-slate-800 text-white mt-3">
